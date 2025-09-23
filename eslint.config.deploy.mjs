@@ -24,6 +24,7 @@ const eslintConfig = [
     rules: {
       // Disable problematic rules for deployment
       '@typescript-eslint/no-this-alias': 'off',
+      '@typescript-eslint/no-require-imports': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
     },

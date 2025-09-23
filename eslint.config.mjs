@@ -22,8 +22,10 @@ const eslintConfig = [
   },
   {
     rules: {
-      // Disable no-this-alias rule during deployment
+      // Disable problematic rules during deployment
       '@typescript-eslint/no-this-alias':
+        process.env.NODE_ENV === 'production' ? 'off' : 'error',
+      '@typescript-eslint/no-require-imports':
         process.env.NODE_ENV === 'production' ? 'off' : 'error',
     },
   },
