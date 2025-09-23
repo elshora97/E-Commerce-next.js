@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:deploy": "ESLINT_NO_DEV_ERRORS=true next build",
+    "lint:deploy": "eslint --config eslint.config.deploy.mjs",
     "start": "next start",
     "lint": "eslint",
     "postinstall": "prisma generate",
